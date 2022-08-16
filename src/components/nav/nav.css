@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root{
+    --title:  linear-gradient(to right, #7a7a7a, #9a9a9a, #bababa, #dcdcdc, #ffffff);
+}
+
+.Nav {
+    background: var(--title);
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 30px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.Nav .icon a{
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    letter-spacing: .8rem;
+}
+ .icon2 {
+    font-size: 4rem;}
+a {
+    text-decoration: none;
+}
+.Nav ul{
+    display: flex;
+    list-style: none;
+    margin: auto 0;
+}
+
+.Nav ul li{
+    margin: 0 2px;
+}
+.Nav ul li a{
+    color: black;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    transition: 10ms;
+}
+.search {
+    margin: 0%;
+    width: 20%;
+    height: 5vh;
+    border-radius: 5%;
+    margin-top: 1rem;
+    border: none;
+    outline: none;
+    text-align: center;
+
+}
+
+.search:hover {
+    border: solid 1px black;
+}
+.car {
+    font-size: 4rem;
+    color: #000000e7;
+    margin-top: .5rem;
+    margin-right: 2rem;
+}
+
+
+
+
+
+.button{position:relative;padding:1em 1.5em;border:none;background-color:transparent;cursor:pointer;outline:0;font-size:18px;margin:1em .8em}
+.button.type1{color:#000000}
+.button.type1.type1::after,.button.type1.type1::before{content:"";display:block;position:absolute;width:20%;height:20%;border:2px solid;transition:all .6s ease;border-radius:2px}
+.button.type1.type1::after{bottom:0;right:0;border-color:transparent #000000 #000000 transparent}
+.button.type1.type1::before{top:0;left:0;border-color:#000000 transparent transparent #000000}
+.button.type1.type1:hover:after,.button.type1.type1:hover:before{width:100%;height:100%}

@@ -1,9 +1,14 @@
 import './App.css';
+import NavBar from './components/nav/NavBar';
 
 function App() {
+
+ 
+
   return (
     <div className="App">
-      <h1>React first app</h1>
+      <NavBar />
+   
     </div>
   );
 }
