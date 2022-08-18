@@ -1,10 +1,13 @@
 import React from 'react'
 import './nav.css'
 import {GiConverseShoe} from 'react-icons/gi'
-import {BsCart4} from 'react-icons/bs'
-
+import {BsSearch} from 'react-icons/bs'
+import CarWidget from './CarWidget'
 
 const NavBar = () => {
+
+
+
     return (
         <div className='NavBar'>
            <nav className='Nav'>
@@ -18,9 +21,12 @@ const NavBar = () => {
                 <li><a href='#' className='button type1'>Mujer</a></li>
                 <li><a href='#' className='button type1'>Rebaja</a></li>
             </ul>
-            
-            <input type="search" placeholder=' Search here' className='search'/>
-            <BsCart4 className='car'/>
+            <p className='br'>
+                <BsSearch className='lupa'/>
+                <input type="search" placeholder='Buscar' className='search'/>
+            </p >
+            < CarWidget />
+
           
            </nav>
 
