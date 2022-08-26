@@ -5,35 +5,28 @@ const ItemCount = () => {
 
     const [contador, setContador] = useState(0)
 
-    const quitar = (e) => {
+    const handler = (e) => {
+        const operation = e.target.name;
+
         e.preventDefault();
-        if(contador > 0){
+        if(operation == 'resta' && contador > 0 ) {
             setContador(contador - 1)
-        } else {
-            setContador(contador)
-            console.log(contador)
-        }
+        } 
+        if(operation == 'suma' ){
+            setContador(contador + 1)
+        } 
     }
-    const compra = (e) => {
-        e.preventDefault();
-        setContador(contador + 1)
-        console.log(contador)
-    }
-    
+   
 
   return (
-    <div className='cont'>
-        <form className='tarjeta'>
-            <span>Shirt tiger</span><br />
-            <div className='valores'>
-                <button onClick={quitar} className='l'>-</button>
+    <div >
+        <div className='valores' >
+                <button onClick={handler} name='resta' className='btn btn-outline-danger'>-</button>
                   <p className='letter'> {contador}</p>  
-                <button onClick={compra} className='l'>+</button><br />
-
-            </div>
+                <button onClick={handler} name='suma' className='btn btn-outline-danger'>+</button><br />
+        </div>
             <button className='btn btn-outline-primary'>Agregar al carrito
             </button>
-        </form>
     </div>
   )
 }

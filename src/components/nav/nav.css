@@ -1,208 +1,47 @@
-*{
-    margin: 0;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.navbar-brand{
+    font-size: 2.4rem;
+    letter-spacing: .5rem;
+    margin-right: 3rem;
 }
-:root{
-    --title:  linear-gradient(to right, #7a7a7a, #9a9a9a, #bababa, #dcdcdc, #ffffff);
+.nav-link{
+    font-size: 1.5rem;
+    margin-left: 1rem;
 }
-
-.Nav {
-    background: white;
-    display: flex;
-    width: 100%;
-    position: relative;
-    justify-content: space-between;
-    text-align: center;
-    padding: 15px 30px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    height: 78px;
-    /* border-bottom: 1px solid black; */
-    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.1);
+.navbar {
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.1); 
 }
-
-.Nav .icon a{
-    font-size: 2.9rem;
-    font-weight: 600;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    margin-bottom: 1rem;
-    letter-spacing: .6rem;
-}
- .icon2 {
-    font-size: 4rem;}
-a {
-    text-decoration: none;
-}
-.Nav ul{
-    display: flex;
-    list-style: none;
-    margin: auto 0;
-}
-
-.Nav ul li{
-    margin: 0 2px;
-}
-.Nav ul li a{
-    color: black;
-    font-size: 1.8rem;
-    text-decoration: none;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    padding: 5px 10px;
-    transition: 10ms;
-}
-.br{
-        background: #9a9a9a29;
-        height: 40px;
-        border-radius: 15px;
-        padding: 0%;
-        margin-top: .5rem;
-
-}
-.search {
-    margin: 0%;
-    width: 250px;
-    height: 5vh;
-    border-radius: 15px;
-    margin-top: 0rem;
-    border: none;
-    outline: none;
-    text-align: center;
-    color: #000000;
-    background: #9a9a9a00;
-
-
-}
-
-.br:hover  {
-    background: #9a9a9a64;
-    color: #000000;
-}
-.search:active {
-    color:  #9a9a9a64;
-}
-
-.lupa {
-    margin: 0%;
-    padding: 0;
-    margin-top: .2rem;
-    position: static;
-    font-size: 1.4rem;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
 
 .car {
-    font-size: 4rem;
-    color: #000000e7;
+    font-size: 3rem;
+    color: #363434;
     margin-top: 0;
     margin-right: 2rem;
-    padding-bottom: 1rem;
+    margin-left: 2rem;
     cursor: pointer;
 }
 
 
-@media screen and (max-width: 547px) {
-    .Nav .icon a{
-        font-size: .7rem;
-        font-weight: 300;
-        letter-spacing: .6rem;
-    }
-    .icon2 {
-        font-size: .5rem;
-        display:block;
-    }
-    .Nav ul li a{
-        color: black;
-        font-size: .6rem;
-        text-decoration: none;
-        text-transform: capitalize;
-        letter-spacing: 0px;
-        padding: 0px 0px;
-        transition: 10ms;
-    }
-    .car {
-    font-size: 1rem;
-    color: #000000e7;
-    margin-top: 0;
-    margin-right: 2rem;
-    padding-bottom: 1rem;
-    cursor: pointer;
-    }
-
-}
-@media screen and (max-width: 600px) {
-    .Nav .icon a{
-        font-size: .8rem;
-        font-weight: 400;
-        letter-spacing: .6rem;
-    }
-    .icon2 {
-        font-size: .6rem;
-        display: block;
-    }
-    .Nav ul li a{
-        color: black;
-        font-size: .8rem;
-        text-decoration: none;
-        text-transform: capitalize;
-        letter-spacing: 2px;
-        padding: 0px 0px;
-        transition: 10ms;
-}
-.car {
-    font-size: 2rem;
-    color: #000000e7;
-    margin-top: 0;
-    margin-right: 2rem;
-    padding-bottom: 1rem;
-    cursor: pointer;
-}
 
 
-}
 @media screen and (max-width: 800px) {
-    .search {
-        display: none;
-
+    .me-auto {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
     }
-    .br{
-        background: #9a9a9a29;
-        height: 100px;
-        width: 40px;
-        border-radius: 50%;
-        padding-top: 5px;
-        padding-right: 10px;
-        display: none;
+    .form-control{
+        width: 400px;
     }
 
-    .lupa {
-        margin: 0%;
-        padding: 0;
-        margin-top: .2rem;
-        position: relative;
-        font-size: .7rem;
-        margin-left: 0px;
+    .car {
+        font-size: 2.5rem;
+        color: #000000e7;
         cursor: pointer;
     }
-    .Nav {
-        background: white;
-        display: flex;
-        width: 100%;
-        position: relative;
-        justify-content: space-between;
-        text-align: center;
-        padding: 0px 0px;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        /* border-bottom: 1px solid black; */
-        box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.1);
-    }
 
 
 }
+
 
 
 
@@ -215,103 +54,20 @@ a {
 .button.type1.type1:hover:after,.button.type1.type1:hover:before{width:100%;height:100%}
 
 
-@media screen and (max-width: 880px) {
-    .Nav .icon a{
-        font-size: 1rem;
-        font-weight: 500;
-        letter-spacing: .6rem;
+@media screen and (max-width: 1000px) {
+    .me-auto {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
     }
-    .icon2 {
-        font-size: 1rem;
-    }
-    .Nav {
-            width: 100%;
-            height: 90px;
-            /* border-bottom: 1px solid black; */
-            box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.1);
-    }
-    .Nav ul li a{
-            color: black;
-            font-size: .9rem;
-            text-decoration: none;
-            text-transform: capitalize;
-            letter-spacing: 3px;
-            padding: 0px 0px;
-            transition: 10ms;
-    }
-    .button.type1.type1::after,.button.type1.type1::before{content:"";display:none;position:absolute;width:100%;height:100%;border:2px solid;transition:all .6s ease;border-radius:2px}
-
 
     .car {
-        font-size: 3rem;
+        font-size: 2.5rem;
         color: #000000e7;
-        margin-top: 0;
-        margin-right: 0;
-        padding-bottom: 1rem;
         cursor: pointer;
     }
+
 }
-
-
-@media screen and (max-width: 1161px) {
-    .Nav .icon a{
-        font-size: 2rem;
-        font-weight: 500;
-        letter-spacing: .2rem;
-    }
-    .icon2 {
-        font-size: 2rem;
-    }
-    .Nav {
-            width: 100%;
-            height: 80px;
-            /* border-bottom: 1px solid black; */
-            box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.1);
-    }
-    .Nav ul li a{
-            color: black;
-            font-size: 1.1rem;
-            text-decoration: none;
-            text-transform: capitalize;
-            letter-spacing: 3px;
-            padding: 0px 0px;
-            transition: 10ms;
-    }
-    .button.type1.type1::after,.button.type1.type1::before{content:"";display:none;position:absolute;width:100%;height:100%;border:2px solid;transition:all .6s ease;border-radius:2px}
-
-    .search {
-        display: none;
-        margin: 0%;
-        width: 100px;
-        height: 10vh;
-        border-radius: 15px;
-        margin-top: .3rem;
-        border: none;
-        text-align: center;
-        color: #000000;
-        background: #9a9a9a00;
-    
-    
-    }
-    .br{
-        display: none;
-        background: #9a9a9a29;
-        height: 40px;
-        width: 250px;
-        border-radius: 10%;
-        padding-top: 5px;
-        padding-right: 0;
-    }
-    .car {
-        font-size: 4rem;
-        color: #000000e7;
-        margin-top: 0;
-        margin-right: 0;
-        padding-bottom: 1rem;
-        cursor: pointer;
-    }
-}
-
 
 .contador {
     margin-left: 2.5rem;
