@@ -31,10 +31,10 @@ const NavBar = (props) => {
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
                         <li className="nav-item">
-                            <Link to="/" className="nav-link">Productos</Link>
+                            <Link to="/producto" className="nav-link">Productos</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/producto" className="nav-link">Detalles</Link>
+                            <Link to="/" className="nav-link">Rebajas</Link>
                         </li>
                         {/* <li className="nav-item">
                             <Link to="/producto" className="nav-link">Detalles</Link>

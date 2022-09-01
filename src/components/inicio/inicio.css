@@ -1,0 +1,20 @@
+.inicio{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 9rem;
+}
+.inicio h1{
+    font-size: 2rem;
+    color: #3d3d3de3;
+    text-decoration: none;
+    margin-left: 2rem;
+}
+.inicio h1:hover{
+    color: #000000e3;
+}
+a {
+    text-decoration: none;
+}
+.inicio img{
+    width: 100%;
+}
