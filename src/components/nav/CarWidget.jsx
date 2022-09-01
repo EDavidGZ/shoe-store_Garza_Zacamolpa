@@ -8,7 +8,6 @@ const CarWidget = () => {
     const [contador, setContador] = useState(0)
     const compra = (e) => {
         setContador(contador + 1)
-        console.log(contador)
     }
 
 
@@ -22,7 +21,7 @@ const CarWidget = () => {
                     : contador > 9 ? (
                     <p className='contador'>9+</p>
                 )
-                 : console.log('no hay compras') }
+                 : 0 }
             </h3>
     </div>
   )

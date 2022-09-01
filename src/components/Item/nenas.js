@@ -1,5 +1,4 @@
 import React from 'react'
-import ItemList from './ItemList'
 
 
 
@@ -17,7 +16,6 @@ const Item = () => {
 
   return (
     <div> 
-        <ItemList products={productos} className="row"/>
     </div>
   )
 }

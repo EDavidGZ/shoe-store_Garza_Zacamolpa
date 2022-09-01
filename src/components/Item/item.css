@@ -1,6 +1,6 @@
 .cont {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 2rem;
     margin-left: 2rem;
 }
@@ -77,4 +77,41 @@
     background: #921010b5;
     padding-top: 3px;
     font-size: 15px;
+}
+/*=====================Detalles ========================*/
+.mb-3 {
+    margin-top: 6rem;
+    width: 85%;
+    margin-left: 6rem;
+
+}
+.card{
+    border: none;
+    height: 70vh;
+}
+.col-md-8{
+padding-left: 20rem;
+}
+
+.tit{
+    font-size: 2.7rem;
+}
+.tt{
+    font-size: 2rem;
+}
+.bdy{
+    border-left: solid 1px rgba(0, 0, 0, 0.252);
+    margin-left: 2rem;
+    padding-left: 4rem;
+    height: 70vh;
+}
+btn-dark.btn-dark{
+    width: 80%;
+}
+.sinp{
+    color: crimson;
+    font-family:cursive;
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-top: 1rem;
 }

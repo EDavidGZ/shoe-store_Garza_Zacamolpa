@@ -1,65 +1,59 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './nav.css'
-import {GiConverseShoe} from 'react-icons/gi'
-import {BsSearch} from 'react-icons/bs'
-import CarWidget from './CarWidget'
+import { GiConverseShoe } from 'react-icons/gi'
+import { BsSearch } from 'react-icons/bs'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { Link } from 'react-router-dom'
+import {BsCart4} from 'react-icons/bs'
+import { DataContext } from '../../context/Dataprovider'
 
-const NavBar = () => {
+
+const NavBar = (props) => {
+    const value = useContext(DataContext)
+    const [menu, setMenu] = value.menu;
+    const [carrito] = value.carrito;
 
 
+    const toogleMenu = () => {
+        setMenu(!menu)
+    }
 
     return (
-        <div className='NavBar'>
+        <div className='navBar'>
+            <h1>{props.title}</h1>
 
             <nav className="navbar navbar-expand-lg bg-light">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="#">Store <GiConverseShoe/></a>
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li className="nav-item">
-                    <a className="nav-link" href="#">Hombre</a>
-                    </li>
-                    <li className="nav-item">
-                    <a className="nav-link" href="#">Mujer</a>
-                    </li>
-                    <li className="nav-item">
-                    <a className="nav-link" href="#">Rebaja</a>
-                    </li>
+                <div className="container-fluid">
+                    <Link to="/" className="navbar-brand">
+                        Store <GiConverseShoe />
+                    </Link>
 
-                 
-                </ul>
-                <form className="d-flex" role="search">
-                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                    <button className="btn btn-outline-secondary" type="submit"><BsSearch /></button>
-                </form>
-            < CarWidget />
-            </div>
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li className="nav-item">
+                            <Link to="/" className="nav-link">Productos</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/producto" className="nav-link">Detalles</Link>
+                        </li>
+                        {/* <li className="nav-item">
+                            <Link to="/producto" className="nav-link">Detalles</Link>
+                        </li> */}
+
+
+                    </ul>
+                    <form className="d-flex" role="search">
+                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button className="btn btn-outline-secondary" type="submit"><BsSearch /></button>
+                    </form>
+                    <div className='marker'  onClick={toogleMenu}>
+                        <BsCart4 className='superMarker'/>
+                        <span className='item__total'>{carrito.length}</span>
+                    </div>
+                </div>
 
             </nav>
 
-
-           {/* <nav classNameName='Nav'>
-            <div>
-                <h2 classNameName='icon'><a href='#'>Store <GiConverseShoe classNameName='icon2'/></a></h2>
-                <h2 classNameName='icon'>Store</h2>
-
-            </div>
-            <ul>
-                <li><a href='#' classNameName='button type1'>Hombre</a></li>
-                <li><a href='#' classNameName='button type1'>Mujer</a></li>
-                <li><a href='#' classNameName='button type1'>Rebaja</a></li>
-            </ul>
-                <BsSearch classNameName='lupa'/>
-                <form classNameName="d-flex" role="search">
-                    <input classNameName="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                    <button classNameName="btn btn-outline-secondary" type="submit"><BsSearch /></button>
-                </form>            
-                    <input type="search" placeholder='Buscar' classNameName='search'/>
-            < CarWidget />
-            <button classNameName="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"/>
-
-
-          
-           </nav> */}
 
         </div>
     )

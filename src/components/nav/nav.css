@@ -9,7 +9,7 @@
 }
 .navbar {
     box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.1); 
-}
+    background: white ;}
 
 .car {
     font-size: 3rem;
@@ -19,8 +19,36 @@
     margin-left: 2rem;
     cursor: pointer;
 }
-
-
+.btn-outline-secondary {
+    border-radius: 20px;
+}
+/*======================= Cart===========================================*/
+.marker {
+    position: relative;
+    cursor: pointer;
+    margin-left: 4rem;
+}
+.superMarker {
+    width: 3rem;
+    height: 3rem;
+    padding-right: 1rem;
+}
+.marker span {
+    position: absolute;
+    top: -.6rem;
+    right: .5rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 0rem;
+    font-size: rem;
+    font-weight: 700;
+    background-color: crimson;
+}
 
 
 @media screen and (max-width: 800px) {
@@ -32,15 +60,19 @@
     .form-control{
         width: 400px;
     }
-
+    
     .car {
         font-size: 2.5rem;
         color: #000000e7;
         cursor: pointer;
     }
+    .burger{
+        display: flex;
+    }
 
 
 }
+
 
 
 
