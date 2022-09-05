@@ -39,6 +39,8 @@ export const DataProvider = (props) => {
             const data = productos.filter(producto => {
                 return producto.id === id;
             })
+            data[0].cantidad = 1;
+            console.log(data);
             setCarrito([...carrito, ...data]);
         }else {
             alert('El producto ya ha sido añadido al carrito')

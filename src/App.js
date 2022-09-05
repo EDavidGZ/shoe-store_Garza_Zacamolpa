@@ -1,9 +1,12 @@
 import './App.css';
 import NavBar from './components/nav/NavBar';
-import { BrowserRouter as Router } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { DataProvider } from "./context/Dataprovider"
-import Paginas from './components/Paginas';
 import Carrito from './components/carrito/Carrito';
+import ItemList from './components/Item/ItemList';
+import ItemDetail from './components/Item/ItemDetail'
+import Inicio from './components/inicio/Inicio'
+
 import 'boxicons';
 
 function App() {
@@ -14,12 +17,15 @@ function App() {
     <DataProvider>
 
       <div className="App">
-        <Router>
-          <NavBar />
-          <Carrito />
-          <Paginas />
-          
-        </Router>
+        <BrowserRouter>
+        <NavBar />
+
+        <Routes>
+            <Route path="/" element={<Inicio/>}/>
+            <Route path="/producto" element={<ItemList />}/>
+            <Route path="/producto/:id" element={<ItemDetail />}/>          
+        </Routes>
+        </BrowserRouter >
 
       </div>
     </DataProvider>

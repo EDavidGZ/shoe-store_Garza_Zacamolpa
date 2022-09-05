@@ -7,7 +7,7 @@ const Carrito = () => {
     const [menu, setMenu] = value.menu;
     const [carrito, setCarrito] = value.carrito;
     const [total] = value.total;
-
+    const [productos] = value.productos;
 
     const tooglefalse = () => {
         setMenu(false);
@@ -75,6 +75,7 @@ const Carrito = () => {
                         <div>
                             <box-icon name='up-arrow' type='solid' onClick={() => suma(producto.id)}></box-icon>
                             <p className="cantidad">{producto.cantidad}</p>
+                            
                             <box-icon name='down-arrow' type='solid' onClick={() => resta(producto.id)}></box-icon>
                         </div>
                         <div className="remove__item" onClick={() => removeProducto(producto.id)}>

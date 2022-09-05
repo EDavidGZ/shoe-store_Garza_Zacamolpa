@@ -1,4 +1,4 @@
-import React, { usecontext, useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { DataContext } from '../../context/Dataprovider'
 import { useParams } from 'react-router-dom'
 import './item.css'
@@ -8,6 +8,7 @@ const ItemDetail = () => {
   const [productos] = value.productos;
   const [detalles, setDetalle] = useState([])
   const params = useParams();
+  const addCarrito = value.addCarrito;
 
   useEffect(() => {
     productos.forEach(producto => {
@@ -16,13 +17,12 @@ const ItemDetail = () => {
       }
     })
   }, [params.id, productos])
+  
 
-
-  console.log(detalles)
 
 
   return (
-    <div className="card mb-3 " >
+    <div className="card cd1 mb-3 " >
       <div className="row g-0">
         <section className="col-md-4">
           <img src={detalles.image} className="img-fluid rounded-start" alt="..." />
@@ -37,8 +37,13 @@ const ItemDetail = () => {
             <div>
 
               <p className="card-text ">Stock: {detalles.cantidad} </p>
+              <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', width: '40%', fontSize: '1.56rem'}}>
+                <p className="card-text light" onClick={e =>  alert('se agrego')}>+ </p>
+                  <p className="card-text"> {detalles.cantidad} </p>
+                <p className="card-text light" onClick={e =>  alert('se agrego')}>- </p>
+              </div>
               <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-              <button className="btn btn-dark">Agregar al carrito</button>
+              <button className="btn btn-dark" onClick={() => addCarrito(detalles.id)}>Agregar al carrito</button>
             </div>
  
               : <p className="card-text sinp">No disponible</p>
