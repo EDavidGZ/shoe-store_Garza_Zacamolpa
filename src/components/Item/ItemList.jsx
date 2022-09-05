@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import './item.css'
-import ItemCount from './ItemDetailContainer'
+import ItemCount from './ItemCount'
 import { DataContext } from '../../context/Dataprovider'
 
 
