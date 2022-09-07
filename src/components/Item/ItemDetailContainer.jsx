@@ -49,7 +49,8 @@ const ItemDetailContainer = () => {
                 <p className="card-text light" onClick={e =>  alert('se agrego')}>- </p>
               </div>
               <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-              <button className="btn btn-dark" onClick={() => addCarrito(detalles.id)}>Agregar al carrito</button>
+              <button className="btn btn-dark cmp1" onClick={() => addCarrito(detalles.id)}>Agregar al carrito</button>
+              <button className="btn btn-outline-success cmp1" onClick={e => alert('Se compro')}>Comprar</button>
             </div>
  
               : <p className="card-text sinp">No disponible</p>

@@ -18,13 +18,13 @@ function App() {
 
       <div className="App">
         <BrowserRouter>
-        <NavBar />
+          <NavBar />
 
-        <Routes>
-            <Route path="/" element={<Inicio/>}/>
-            <Route path="/producto" element={<ItemList />}/>
-            <Route path="/producto/:id" element={<ItemDetail />}/>          
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Inicio />} />
+            <Route path="/producto" element={<ItemList />} />
+            <Route path="/producto/:id" element={<ItemDetail />} />
+          </Routes>
         </BrowserRouter >
 
       </div>
