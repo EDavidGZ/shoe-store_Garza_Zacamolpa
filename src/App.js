@@ -3,10 +3,10 @@ import NavBar from './components/nav/NavBar';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { DataProvider } from "./context/Dataprovider"
 import Carrito from './components/carrito/Carrito';
-import ItemList from './components/Item/ItemList';
-import ItemDetail from './components/Item/ItemDetail'
+import ItemCount from './components/Item/ItemCount';
+import ItemDetailContainer from './components/Item/ItemDetailContainer'
 import Inicio from './components/inicio/Inicio'
-
+import Cart from './components/Item/Cart'
 import 'boxicons';
 
 function App() {
@@ -19,11 +19,13 @@ function App() {
       <div className="App">
         <BrowserRouter>
           <NavBar />
+          <Carrito />
 
           <Routes>
             <Route path="/" element={<Inicio />} />
-            <Route path="/producto" element={<ItemList />} />
-            <Route path="/producto/:id" element={<ItemDetail />} />
+            <Route path="/producto" element={<ItemCount />} />
+            <Route path="/producto/:id" element={<ItemDetailContainer />} />
+            <Route path="/carrito" element={<Cart />} />
           </Routes>
         </BrowserRouter >
 

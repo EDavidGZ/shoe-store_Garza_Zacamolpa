@@ -43,7 +43,12 @@ export const DataProvider = (props) => {
             console.log(data);
             setCarrito([...carrito, ...data]);
         }else {
-            alert('El producto ya ha sido añadido al carrito')
+            const data = productos.filter(producto => {
+                return producto.id === id;
+            })
+            data[0].cantidad += 1;
+            data[0].price += data[0].price;
+
         }
     }
     useEffect(() => {
