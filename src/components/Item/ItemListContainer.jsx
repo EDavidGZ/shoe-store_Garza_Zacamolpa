@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
 import './item.css'
 import ItemList from './ItemLists'
-import { DataContext } from '../../context/Dataprovider'
+import { CartContext } from '../../context/CartContext'
 
 
 
 
 const ItemCount = () => {
 
-  const value = useContext(DataContext)
+  const value = useContext(CartContext)
   const [productos] = value.productos;
 
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, createContext} from 'react'
 import Item from '../Item'
 
-export const DataContext = createContext();
+export const CartContext = createContext();
 
 export const DataProvider = (props) => {
     const [productos, setProductos] = useState ([])
@@ -18,7 +18,7 @@ export const DataProvider = (props) => {
           } else {
             rej(setProductos([]))
           }
-        })
+        }) 
       }
 
 
@@ -31,7 +31,7 @@ export const DataProvider = (props) => {
         
     }, [])
 
-    const addCarrito = (id) => {
+    const addCarrito = (id, valor) => {
         const check = carrito.every(item => {
             return item.id !== id;
         })
@@ -39,14 +39,14 @@ export const DataProvider = (props) => {
             const data = productos.filter(producto => {
                 return producto.id === id;
             })
-            data[0].cantidad = 1;
+            data[0].cantidad = valor;
             console.log(data);
             setCarrito([...carrito, ...data]);
         }else {
             const data = productos.filter(producto => {
                 return producto.id === id;
             })
-            data[0].cantidad += 1;
+            data[0].cantidad += valor;
             data[0].price += data[0].price;
 
         }
@@ -83,9 +83,9 @@ export const DataProvider = (props) => {
     }
 
     return (
-        <DataContext.Provider value={value} >
+        <CartContext.Provider value={value} >
             {props.children}
-        </DataContext.Provider>
+        </CartContext.Provider>
     )
 
 }

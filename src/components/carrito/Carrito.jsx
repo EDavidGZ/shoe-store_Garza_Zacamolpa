@@ -1,9 +1,9 @@
 import React,{ useContext} from 'react'
 import { GrFormClose } from 'react-icons/gr'
-import { DataContext } from '../../context/Dataprovider'
+import { CartContext } from '../../context/CartContext'
 
 const Carrito = () => {
-    const value = useContext(DataContext)
+    const value = useContext(CartContext)
     const [menu, setMenu] = value.menu;
     const [carrito, setCarrito] = value.carrito;
     const [total] = value.total;

@@ -5,11 +5,11 @@ import { BsSearch } from 'react-icons/bs'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { Link } from 'react-router-dom'
 import {BsCart4} from 'react-icons/bs'
-import { DataContext } from '../../context/Dataprovider'
+import { CartContext } from '../../context/CartContext'
 
 
 const NavBar = (props) => {
-    const value = useContext(DataContext)
+    const value = useContext(CartContext)
     const [menu, setMenu] = value.menu;
     const [carrito] = value.carrito;
 

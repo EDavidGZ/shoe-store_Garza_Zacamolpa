@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { DataContext } from '../../context/Dataprovider'
+import { CartContext } from '../../context/CartContext'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import './item.css'
@@ -9,10 +9,11 @@ import ItemCount from './ItemCount';
 
 
 const ItemDetail = () => {
-    const value = useContext(DataContext)
+    const value = useContext(CartContext)
     const [productos] = value.productos;
     const [detalles, setDetalle] = useState([])
     const params = useParams();
+    const [car, setCar] = useState(false)
 
    
   
