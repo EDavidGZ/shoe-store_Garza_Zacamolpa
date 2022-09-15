@@ -7,7 +7,7 @@ const ItemCount = ({id, cantidad}) => {
     const [valor, setValor] = useState(1)
     const [car, setCar] = useState(false)
     const value = useContext(CartContext)
-    const addCarrito = value.addCarrito
+   const addCarrito = value.addCarrito
 
     const agregarCarrito = (id, valor) => {
         const productosCarrito = {id: id, valor: valor}

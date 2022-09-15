@@ -13,7 +13,18 @@ const ItemDetail = () => {
     const [productos] = value.productos;
     const [detalles, setDetalle] = useState([])
     const params = useParams();
+    const [valor, setValor] = useState(1)
     const [car, setCar] = useState(false)
+
+    const agregarCarrito = (id, valor) => {
+      const productosCarrito = {id: id, valor: valor}
+      console.log(productosCarrito)
+
+      if(productosCarrito){
+          setCar(true)
+          console.log(car)
+      }
+    }
 
    
   
@@ -43,7 +54,7 @@ const ItemDetail = () => {
             <p className="card-text tt">New | Three </p>
             <p className="card-text tt">Price: ${detalles.price}</p><br /><br /><br /><br />
             { detalles.cantidad > 0 ? 
-            <ItemCount cantidad={detalles.cantidad} id={detalles.id} />
+            <ItemCount cantidad={detalles.cantidad} id={detalles.id} agregarCarrito={agregarCarrito} />
               : <p className="card-text sinp">No disponible</p>
 
             }
