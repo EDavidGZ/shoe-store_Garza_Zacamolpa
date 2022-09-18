@@ -8,6 +8,7 @@ export const DataProvider = (props) => {
     const [menu, setMenu] = useState(false)
     const [carrito, setCarrito] = useState([])
     const [total, setTotal] = useState(0)
+    const [cartValor, setCartValor] = useState(0)
     
     const producto = Item.items;
     
@@ -40,7 +41,6 @@ export const DataProvider = (props) => {
                 return producto.id === id;
             })
             data[0].cantidad = valor;
-            console.log(data);
             setCarrito([...carrito, ...data]);
         }else {
             const data = productos.filter(producto => {
@@ -65,14 +65,20 @@ export const DataProvider = (props) => {
             }, 0)
             setTotal(res)
         }
-
+        const valorTotal = ()=> {
+            const cartv = carrito.reduce((prev, item) =>{
+                return prev +  item.cantidad;
+            }, 0)
+            setCartValor(cartv)
+        }
+        valorTotal()
         getTotal()
     }, [carrito])
     /*============================ Function to remove products  =====================================================*/
     const removeProducto = id => {
         if (window.confirm('¿Quieres eliminar el producto?')) {
             carrito.forEach((item, index) => {
-                if (item.id == id) {
+                if (item.id === id) {
                     item.cantidad = 1;
                     carrito.splice(index, 1);
                 }
@@ -100,7 +106,8 @@ export const DataProvider = (props) => {
         carrito: [carrito, setCarrito],
         total: [total, setTotal],
         removeProducto: removeProducto,
-        remove: remove     
+        remove: remove,
+        cartValor: [cartValor]
     }
 
     return (

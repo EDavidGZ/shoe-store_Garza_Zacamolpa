@@ -6,6 +6,7 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { Link } from 'react-router-dom'
 import {BsCart4} from 'react-icons/bs'
 import { CartContext } from '../../context/CartContext'
+import CarWidget from './CarWidget'
 
 
 const NavBar = (props) => {
@@ -46,11 +47,8 @@ const NavBar = (props) => {
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                         <button className="btn btn-outline-secondary" type="submit"><BsSearch /></button>
                     </form>
-                    <div className='marker'  onClick={toogleMenu}>
-                        <BsCart4 className='superMarker'/>
-                        <span className='item__total'>{carrito.length}</span>
-                    </div>
-                </div>
+                    <CarWidget />          
+                          </div>
 
             </nav>
 

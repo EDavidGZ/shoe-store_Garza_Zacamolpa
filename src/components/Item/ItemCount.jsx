@@ -46,7 +46,7 @@ const ItemCount = ({id, cantidad}) => {
             <span>El producto ya fue agregado</span>:
             <>
             <button className="btn btn-dark cmp1" onClick={() => addCarrito(id, valor)}>Agregar al carrito</button>
-            <Link to='/carrito' className="btn btn-outline-success cmp1" >Comprar</Link>
+            <Link to='/carrito' className="btn btn-outline-success cmp1" >Terminar mi compra</Link>
             </>
             
             }
