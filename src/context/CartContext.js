@@ -30,7 +30,7 @@ export const DataProvider = (props) => {
 
         
     }, [])
-
+/*============================ Function to add product  =====================================================*/
     const addCarrito = (id, valor) => {
         const check = carrito.every(item => {
             return item.id !== id;
@@ -51,13 +51,13 @@ export const DataProvider = (props) => {
 
         }
     }
-    useEffect(() => {
-        const dataCarrito =JSON.parse(localStorage.getItem('dataCarrito'))
-        if(dataCarrito) {
-            setCarrito(dataCarrito)
-        }
-    }, [])
-
+    // useEffect(() => {
+    //     const dataCarrito =JSON.parse(localStorage.getItem('dataCarrito'))
+    //     if(dataCarrito) {
+    //         setCarrito(dataCarrito)
+    //     }
+    // }, [])
+/*============================ Function to total the product  =====================================================*/
     useEffect(() =>{
         const getTotal = ()=> {
             const res = carrito.reduce((prev, item) =>{
@@ -68,6 +68,25 @@ export const DataProvider = (props) => {
 
         getTotal()
     }, [carrito])
+    /*============================ Function to remove products  =====================================================*/
+    const removeProducto = id => {
+        if (window.confirm('¿Quieres eliminar el producto?')) {
+            carrito.forEach((item, index) => {
+                if (item.id == id) {
+                    item.cantidad = 1;
+                    carrito.splice(index, 1);
+                }
+            })
+            setCarrito([...carrito]);
+        }
+    }
+    const remove = () => {
+        if (window.confirm('¿Quieres eliminar todos los producto?')) {
+            setCarrito([])
+        }
+    }
+    /*=============================================================================*/
+
 
     useEffect(() => {
         localStorage.setItem('dataCarrito', JSON.stringify(carrito))
@@ -79,7 +98,9 @@ export const DataProvider = (props) => {
         menu: [menu, setMenu],
         addCarrito: addCarrito,
         carrito: [carrito, setCarrito],
-        total: [total, setTotal]
+        total: [total, setTotal],
+        removeProducto: removeProducto,
+        remove: remove     
     }
 
     return (
