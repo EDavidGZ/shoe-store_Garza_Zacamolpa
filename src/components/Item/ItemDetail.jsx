@@ -54,7 +54,7 @@ const ItemDetail = () => {
             <p className="card-text tt">New | Three </p>
             <p className="card-text tt">Price: ${detalles.price}</p><br /><br /><br /><br />
             { detalles.cantidad > 0 ? 
-            <ItemCount cantidad={detalles.cantidad} id={detalles.id} agregarCarrito={agregarCarrito} />
+            <ItemCount cantidad={detalles.cantidad} id={detalles.id} agregarCarrito={agregarCarrito()} car={car}/>
               : <p className="card-text sinp">No disponible</p>
 
             }

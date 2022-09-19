@@ -3,22 +3,12 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext'
 
 
-const ItemCount = ({id, cantidad}) => {
+const ItemCount = ({id, cantidad, agregarCarrito, car}) => {
     const [valor, setValor] = useState(1)
-    const [car, setCar] = useState(false)
     const value = useContext(CartContext)
    const addCarrito = value.addCarrito
 
-    const agregarCarrito = (id, valor) => {
-        const productosCarrito = {id: id, valor: valor}
-        console.log(productosCarrito)
 
-        if(productosCarrito){
-            setCar(true)
-            console.log(car)
-        }
-      }
-  
       const cantidadPoducto = (operacion) => {
         if( operacion === '+'){
           if(valor < cantidad){
@@ -45,6 +35,7 @@ const ItemCount = ({id, cantidad}) => {
             {car ?
             <span>El producto ya fue agregado</span>:
             <>
+            <button className="btn btn-dark cmp1" onClick={() => agregarCarrito(id, valor)}>Agregar al carrito</button>
             <button className="btn btn-dark cmp1" onClick={() => addCarrito(id, valor)}>Agregar al carrito</button>
             <Link to='/carrito' className="btn btn-outline-success cmp1" >Terminar mi compra</Link>
             </>

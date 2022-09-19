@@ -9,6 +9,8 @@ export const DataProvider = (props) => {
     const [carrito, setCarrito] = useState([])
     const [total, setTotal] = useState(0)
     const [cartValor, setCartValor] = useState(0)
+    const [car, setCar] = useState(false)
+
     
     const producto = Item.items;
     
@@ -107,7 +109,8 @@ export const DataProvider = (props) => {
         total: [total, setTotal],
         removeProducto: removeProducto,
         remove: remove,
-        cartValor: [cartValor]
+        cartValor: [cartValor],
+        car: [car]
     }
 
     return (

@@ -13,7 +13,6 @@ const CarWidget = () => {
   const [carrito] = value.carrito;
   const [cartValor] = value.cartValor;
 
-  console.log(cartValor)
 
 
 
