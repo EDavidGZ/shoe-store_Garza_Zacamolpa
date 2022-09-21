@@ -13,7 +13,7 @@ export const DataProvider = (props) => {
 
     
     const producto = Item.items;
-    
+    const productoModificar = producto
     function consultarPromesa(confirmar) {
         return new Promise((res, rej) => {
           if (confirmar) {
@@ -39,13 +39,18 @@ export const DataProvider = (props) => {
             return item.id !== id;
         })
         if(check){
-            const data = productos.filter(producto => {
+            const data = productoModificar.filter(producto => {
                 return producto.id === id;
             })
-            data[0].cantidad = valor;
-            setCarrito([...carrito, ...data]);
+            // data[0].cantidad = valor;
+            let productInfo = data
+            productInfo[0].cantidad = valor
+            // console.log('esta es data',data)
+            console.log('This is my product',productos)
+            console.log('This is my productInfo',productInfo)
+            setCarrito([...carrito, ...productInfo]);
         }else {
-            const data = productos.filter(producto => {
+            const data = productoModificar.filter(producto => {
                 return producto.id === id;
             })
             data[0].cantidad += valor;
@@ -79,14 +84,11 @@ export const DataProvider = (props) => {
     /*============================ Function to remove products  =====================================================*/
     const removeProducto = id => {
         if (window.confirm('¿Quieres eliminar el producto?')) {
-            carrito.forEach((item, index) => {
-                if (item.id === id) {
-                    item.cantidad = 1;
-                    carrito.splice(index, 1);
-                }
-            })
-            setCarrito([...carrito]);
+            let productosEliminar = carrito.filter(item => item.id !== id )
+            console.log(productosEliminar)
+            setCarrito(productosEliminar);
         }
+
     }
     const remove = () => {
         if (window.confirm('¿Quieres eliminar todos los producto?')) {

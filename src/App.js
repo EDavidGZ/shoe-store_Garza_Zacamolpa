@@ -1,4 +1,3 @@
-import './App.css';
 import NavBar from './components/nav/NavBar';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { DataProvider } from "./context/CartContext"
