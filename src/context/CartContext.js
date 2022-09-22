@@ -1,5 +1,6 @@
 import React, { useState, useEffect, createContext} from 'react'
 import Item from '../Item'
+import { getProducts } from '../utils/firebase';
 
 export const CartContext = createContext();
 
@@ -12,25 +13,36 @@ export const DataProvider = (props) => {
     const [car, setCar] = useState(false)
 
     
-    const producto = Item.items;
-    const productoModificar = producto
-    function consultarPromesa(confirmar) {
-        return new Promise((res, rej) => {
-          if (confirmar) {
-            res( setProductos(producto))
-          } else {
-            rej(setProductos([]))
-          }
-        }) 
-      }
+    // const producto = Item.items;
+
+    // const productoModificar = producto
+
+    // function consultarPromesa(confirmar) {
+    //     return new Promise((res, rej) => {
+    //       if (confirmar) {
+    //         res( setProductos(producto))
+    //       } else {
+    //         rej(setProductos([]))
+    //       }
+    //     }) 
+    //   }
+    
+    async function conslutarDB () {
+        const producto = await getProducts()
+        const theItems = producto.docs.map(producto => producto.data())
+        console.log(theItems)
+        setProductos(theItems)
+    }
+    const productoModificar = productos
+
 
 
     useEffect(() =>{
-        setTimeout(()=>{
-            consultarPromesa(true)
+        // setTimeout(()=>{
+        //     consultarPromesa(true)
 
-        },2000)
-
+        // },2000)
+        conslutarDB()
         
     }, [])
 /*============================ Function to add product  =====================================================*/
