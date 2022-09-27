@@ -18,7 +18,6 @@ async function cargarBaseDeDatos() {
   const productos = await promise.json()
   productos.forEach(async (producto) => {
     await addDoc(collection(db, "productos"), {
-      id: producto.id,
       title: producto.title,
       price: producto.price,
       category: producto.category,

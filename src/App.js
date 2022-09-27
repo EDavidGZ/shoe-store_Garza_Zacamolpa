@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { DataProvider } from "./context/CartContext"
 import Carrito from './components/carrito/Carrito';
 import ItemListContainer from './components/Item/ItemListContainer';
-import ItemDetailContainer from './components/Item/ItemDetailContainer'
+import ItemDetail from './components/Item/ItemDetail'
 import Inicio from './components/inicio/Inicio'
 import Cart from './components/Item/Cart'
 import 'boxicons';
@@ -23,7 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/producto" element={<ItemListContainer />} />
-            <Route path="/producto/:id" element={<ItemDetailContainer />} />
+            <Route path="/producto/:id" element={<ItemDetail />} />
             <Route path="/carrito" element={<Cart />} />
           </Routes>
         </BrowserRouter >

@@ -29,7 +29,7 @@ const ItemDetail = () => {
   
     useEffect(() => {
       productos.forEach(producto => {
-        if (producto.id === parseInt(params.id)) {
+        if (producto.id === params.id) {
           setDetalle(producto)
         }
       })

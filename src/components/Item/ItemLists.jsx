@@ -17,7 +17,7 @@ const ItemList = ({
 
 
   return (
-    <div className="card cd2 tarjeta" style={{ width: "20rem" }}>
+    <div className="card cd2 tarjeta" style={{ width: "80%" }}>
       <Link to={`/producto/${id}`}>
         <div>
           <img src={image} alt={title} className="card-img-top" />
@@ -31,14 +31,6 @@ const ItemList = ({
             <p className="card-text tt1">${price}</p>
             <p className="card-text green">Envio gratis </p>
           </Link>
-
-          {cantidad > 0 ?
-            <ItemCount cantidad={cantidad} id={id} />
-
-
-            : <p className="card-text sinp">No disponible</p>
-
-          }
 
         </div>
       </div>
