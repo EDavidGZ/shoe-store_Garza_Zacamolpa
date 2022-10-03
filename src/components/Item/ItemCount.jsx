@@ -25,9 +25,9 @@ const ItemCount = ({id, cantidad}) => {
   
 
     return (
-        <>
+        <div style={{marginTop: "-5rem"}}>
             <p className="card-text ct2 " >Stock: {cantidad} </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', width: '40%', fontSize: '1rem', paddingTop: '-30rem'}}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', width: '30%', fontSize: '1rem'}}>
                 <p className="card-text light" onClick={e => cantidadPoducto('+')}>+ </p>
                 <p className="card-text"> {valor} </p>
                 <p className="card-text light" onClick={e => cantidadPoducto('-')}>- </p>
@@ -41,7 +41,7 @@ const ItemCount = ({id, cantidad}) => {
             </>
             
             }
-        </>
+        </div>
     )
 }
 

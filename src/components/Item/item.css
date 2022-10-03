@@ -1,8 +1,9 @@
 .cont {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
     margin-top: 2rem;
-    margin-left: 2rem;
+    
 }
 @media screen and (max-width: 1200px) {
     .cont {
@@ -73,7 +74,6 @@
     border: none;
     font-size: 1rem;
 } */
-
 .btn-outline-primary{
     margin-bottom: 22px;
 }
@@ -90,27 +90,32 @@
     font-size: 15px;
 }
 /*=====================Detalles ========================*/
+.foto{
+    margin-left: 3rem;
+    margin-top: 3rem;
+    width: 30%;
+}
 .mb-3 {
-    margin-top: 6rem;
-    width: 85%;
-    margin-left: 6rem;
-    
+    width: 90%;
+    margin-top: 2rem;
+    left: 5%;
 }
 .cd1{
-    height: 70vh;
+    height: 60vh;
     box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.1);
-    
+    display: grid;
+    grid-template-rows: repeat(2, 1fr) ;
 }
 .cd2{
-    height: 75vh;
-    width: 100%;
+    height: 55vh;
+    width: 90%;
     padding: 0;
 }
 .card{
     border: none;
 }
 .col-md-8{
-    padding-left: 20rem;
+    width: 60%;
 }
 
 .tit{
@@ -129,19 +134,18 @@
     border-left: solid 1px rgba(0, 0, 0, 0.252);
     margin-left: 2rem;
     padding-left: 4rem;
-    height: 70vh;
 }
 .btn-dark{
     width: 80%;
 }
 .btn-dark.cmp1{
-    width: 80%;
+    width: 100%;
     margin-bottom: 1rem;
     height: 37px;
     font-size: .8rem;
 }
 .btn-outline-success.cmp1{
-    width: 80%;
+    width: 100%;
 }
 .sinp{
     color: crimson;
@@ -171,8 +175,31 @@
     .cont {
         grid-template-columns: repeat(2, 1fr);
         margin-top: 1rem;
-        margin-left: 0rem;
     }
+    .cd2{
+        height: 40vh;
+        width: 90%;
+        padding: 0;
+    }
+    .bdy{
+        border-left: solid 0px rgba(0, 0, 0, 0.252);
+        margin-left: 0rem;
+        padding-left: 1rem;
+    }
+    .cd1{
+        height: 80vh;
+        box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.1);
+        display: grid;
+        grid-template-rows: repeat(2, 1fr) 
+    }
+     .mb-3 {
+            width: 100%;
+            left: 0%;
+
+        
+     }
+    
+    
     }
 /*=========================Itemcount================================*/
 /*=========================cart================================*/

@@ -42,8 +42,8 @@ const ItemDetail = () => {
   return (
     <div className="card cd1 mb-3 " >
       <div className="row g-0">
-        <section className="col-md-4">
-          <img src={detalles.image} className="img-fluid rounded-start" alt="..." />
+        <section className="foto">
+          <img src={detalles.image}  style={{width: '100%'}} />
         </section>
         <div className="col-md-8">
           <div className="card-body bdy">

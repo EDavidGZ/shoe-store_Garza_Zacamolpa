@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom'
 import './item.css'
+import { useEffect } from 'react'
 
 const Cart = () => {
     const value = useContext(CartContext)
@@ -9,11 +10,13 @@ const Cart = () => {
     const [total] = value.total;
     const removeProducto = value.removeProducto;
     const remove = value.remove;
+    const actualizarTodo = value.actualizarTodo;
 
+  
 
 
     return (
-        <div className='show1'>
+        <div className='show1 ' >
             <br /><br />
             <div className="carrito__center">
 
@@ -24,7 +27,7 @@ const Cart = () => {
                             <h2 style={{
                                 textAlign: 'center', fontSize: "3rem"
                             }}> Carrito vacio </h2>
-                            <Link to="/producto" className="btn btn-outline-dark" style={{ width: "50%" }}>Regresar a la tienda</Link>
+                            <Link to="/producto" className="btn btn-outline-dark" style={{ width: "50%", margin: '0 auto', marginTop: '2rem' }}>Regresar a la tienda</Link>
 
                         </div> :
                         <>
@@ -56,7 +59,7 @@ const Cart = () => {
 
                             <div className="carrito__footer">
                                 <h3>Total: ${total}</h3>
-                                <button className="btn">Terminar compra</button>
+                                <Link to="/producto" className="btn" onClick={() => actualizarTodo()}>Terminar compra</Link>
                             </div>
 
                         </>

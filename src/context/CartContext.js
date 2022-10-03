@@ -1,17 +1,19 @@
 import React, { useState, useEffect, createContext } from 'react'
-import Item from '../Item'
-import { getProducts } from '../utils/firebase';
+import { getProducts, updateStock } from '../utils/firebase';
 
 export const CartContext = createContext();
 
 export const DataProvider = (props) => {
     const [productos, setProductos] = useState([])
+    const [tablaUsuarios, setTablaUsuarios] = useState([])
     const [menu, setMenu] = useState(false)
     const [carrito, setCarrito] = useState([])
     const [total, setTotal] = useState(0)
     const [cartValor, setCartValor] = useState(0)
     const [car, setCar] = useState(false)
     const productoModificar = productos
+    const [usuarios, setUsuarios] = useState([])
+
 
 
 
@@ -22,13 +24,25 @@ export const DataProvider = (props) => {
         theItems.map((item, index) => {
             item.id = theKeys[index]
         })
-
         setProductos(theItems)
+        setTablaUsuarios(theItems)
     }
+    // console.log(tablaUsuarios[0].title)
     useEffect(() => {
         conslutarDB()
 
     }, [])
+    /*============================ Function to serch  =====================================================*/
+    const filtrar=(terminoBusqueda)=>{
+        const resultadosBusqueda = tablaUsuarios.filter((elemento)=>{
+            if(elemento.title.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
+            ){
+                return elemento;
+            }
+        });
+        setUsuarios(resultadosBusqueda);
+    }
+    console.log(usuarios)
     /*============================ Function to add product  =====================================================*/
     const addCarrito = (id, valor) => {
         const check = carrito.every(item => {
@@ -54,6 +68,29 @@ export const DataProvider = (props) => {
 
         }
     }
+    /*============================ Function to total the product  =====================================================*/
+    // console.log(carrito)
+    function actualizarTodo() {
+        const actualizar = carrito.map(carUpdate => {
+             const cantidades = productos.map(cxa =>{
+               if(cxa.id == carUpdate.id){
+                let resta = cxa.cantidad - carUpdate.cantidad
+                console.log(resta)
+             alert('Compra Finalizada')
+            return updateStock(carUpdate.id, resta)
+
+
+               }})
+               setCarrito([])
+
+            //  let canti = cantidades - carUpdate.cantidad
+
+        })
+        // const actualirCantidad = carrito.map(carUpdate => carUpdate.cantidad)
+
+    }
+
+    /*=================================================================================*/
     /*============================ Function to total the product  =====================================================*/
     useEffect(() => {
         const getTotal = () => {
@@ -88,9 +125,9 @@ export const DataProvider = (props) => {
     /*=============================================================================*/
 
 
-    useEffect(() => {
-        localStorage.setItem('dataCarrito', JSON.stringify(carrito))
-    }, [carrito])
+    // useEffect(() => {
+    //     localStorage.setItem('dataCarrito', JSON.stringify(carrito))
+    // }, [carrito])
 
 
     const value = {
@@ -102,7 +139,11 @@ export const DataProvider = (props) => {
         removeProducto: removeProducto,
         remove: remove,
         cartValor: [cartValor],
-        car: [car]
+        car: [car],
+        actualizarTodo: actualizarTodo,
+        tablaUsuarios: [tablaUsuarios, setTablaUsuarios],
+        filtrar: filtrar,
+        usuarios: [usuarios],
     }
 
     return (

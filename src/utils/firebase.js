@@ -35,5 +35,15 @@ const getProducts = async () => {
   const productos = await getDocs(collection(db,"productos"))
   return  productos
 }
+const updateStock = async (id, cantidad) => {
+  const producto = doc(db, 'productos', id);
 
-export { db, app, cargarBaseDeDatos, getProduct, getProducts }
+  
+
+  await updateDoc(producto, {
+    cantidad:  cantidad,
+  });
+};
+
+
+export { db, app, cargarBaseDeDatos, getProduct, getProducts, updateStock }

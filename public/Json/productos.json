@@ -4,7 +4,7 @@
       "price": 401,
       "image": "https://firebasestorage.googleapis.com/v0/b/shoesstore-97a8f.appspot.com/o/img01.jpg?alt=media&token=bd544667-ebae-4e05-b456-244cbc236f9a",
       "category": "nike",
-      "cantidad": 3
+      "cantidad": 100
     },
     {
       "title": "Nike Dunk Low Off-White Pine Green",
@@ -18,62 +18,62 @@
       "price": 475,
       "image": "https://firebasestorage.googleapis.com/v0/b/shoesstore-97a8f.appspot.com/o/img03.jpg?alt=media&token=38460b9b-06e0-4516-812f-c489831c2554",
       "category": "nike",
-      "cantidad": 5
+      "cantidad": 60
     },
     {
       "title": "Nike LD Waffle Sacai White Nylon",
       "price": 399,
       "image": "https://firebasestorage.googleapis.com/v0/b/shoesstore-97a8f.appspot.com/o/img04.jpg?alt=media&token=50be4ee8-8c5d-4e7a-876f-8fa95500e73f",
       "category": "nike",
-      "cantidad": 2
+      "cantidad": 30
     },
     {
       "title": "Nike Dunk Low SP Kentucky (2021)",
       "price": 405,
       "image": "https://firebasestorage.googleapis.com/v0/b/shoesstore-97a8f.appspot.com/o/img05.jpg?alt=media&token=a0eafe94-0c9c-44f8-9ca4-45f2a7e1df8c",
       "category": "nike",
-      "cantidad": 4
+      "cantidad": 44
     },
     {
       "title": "Nike Dunk Low Off-White University",
       "price": 285,
       "image": "https://firebasestorage.googleapis.com/v0/b/shoesstore-97a8f.appspot.com/o/img06.jpg?alt=media&token=08c0c09a-2462-4d31-ac1e-5811e37d6d8b",
       "category": "nike",
-      "cantidad": 12
+      "cantidad": 123
     },
     {
       "title": "Nike Air Max 2 Light Atmos",
       "price": 360,
       "image": "https://firebasestorage.googleapis.com/v0/b/shoesstore-97a8f.appspot.com/o/img07.jpg?alt=media&token=2445c902-361e-4876-ac33-5f29e27e73d4",
       "category": "nike",
-      "cantidad": 12
+      "cantidad": 125
     },
     {
       "title": "Nike Air Force 1 Low CLOT Blue Silk",
       "price": 335,
       "image": "https://firebasestorage.googleapis.com/v0/b/shoesstore-97a8f.appspot.com/o/img08.jpg?alt=media&token=73987c7b-5be1-4f55-8cd8-3874896c2bb6",
       "category": "nike",
-      "cantidad": 11
+      "cantidad": 114
     },
     {
       "title": "Nike Air Max 90 OG Volt (2020)",
       "price": 799,
       "image": "https://firebasestorage.googleapis.com/v0/b/shoesstore-97a8f.appspot.com/o/img09.jpg?alt=media&token=73388935-3529-4dfa-a2c6-6f90d85832f7",
       "category": "nike",
-      "cantidad": 3
+      "cantidad": 34
     },
     {
       "title": "Nike Dunk High Varsity Maize",
       "price": 501,
       "image": "https://firebasestorage.googleapis.com/v0/b/shoesstore-97a8f.appspot.com/o/img10.jpg?alt=media&token=e44c1db0-0039-4e7d-acf0-aa5c65dcdc0f",
       "category": "nike",
-      "cantidad": 1
+      "cantidad": 19
     },
     {
       "title": "Nike Air Rubber Dunk Off-White UNC",
       "price": 377,
       "image": "https://firebasestorage.googleapis.com/v0/b/shoesstore-97a8f.appspot.com/o/img011.jpg?alt=media&token=92c28ff0-c033-43a4-a780-0cfeb3be7337",
       "category": "nike",
-      "cantidad": 7
+      "cantidad": 72
     }
   ]
