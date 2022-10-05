@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, {  useContext } from 'react'
 import { BsBag } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import './nav.css'

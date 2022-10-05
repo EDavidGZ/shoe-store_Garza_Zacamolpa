@@ -4,7 +4,6 @@ import { GiConverseShoe } from 'react-icons/gi'
 import { BsSearch } from 'react-icons/bs'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { Link } from 'react-router-dom'
-import { BsCart4 } from 'react-icons/bs'
 import { CartContext } from '../../context/CartContext'
 import CarWidget from './CarWidget'
 
@@ -43,11 +42,11 @@ const NavBar = (props) => {
                             <Link to="/producto" className="nav-link">Productos</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/contact" className="nav-link">Contacto</Link>
-                        </li>{/*
+                            <Link to="/hombre" className="nav-link">Hombre</Link>
+                        </li>
                          <li className="nav-item">
-                            <Link to="/producto" className="nav-link">Detalles</Link>
-                        </li> */}
+                            <Link to="/mujer" className="nav-link">Mujer</Link>
+                        </li> 
 
 
                     </ul>

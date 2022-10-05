@@ -22,7 +22,8 @@ async function cargarBaseDeDatos() {
       price: producto.price,
       category: producto.category,
       cantidad: producto.cantidad,
-      image: producto.image
+      image: producto.image,
+      genero: producto.genero
     });
   })
 
@@ -37,8 +38,6 @@ const getProducts = async () => {
 }
 const updateStock = async (id, cantidad) => {
   const producto = doc(db, 'productos', id);
-
-  
 
   await updateDoc(producto, {
     cantidad:  cantidad,

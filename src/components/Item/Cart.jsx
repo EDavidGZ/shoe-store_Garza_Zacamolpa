@@ -2,14 +2,13 @@ import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom'
 import './item.css'
-import { useEffect } from 'react'
 
 const Cart = () => {
     const value = useContext(CartContext)
     const [carrito] = value.carrito;
     const [total] = value.total;
-    const removeProducto = value.removeProducto;
     const remove = value.remove;
+    const confirmarRemove = value.confirmarRemove;
     const actualizarTodo = value.actualizarTodo;
 
   
@@ -49,13 +48,13 @@ const Cart = () => {
                                             <p className="cantidad">{producto.cantidad}</p>
 
                                         </div>
-                                        <div className="remove__item" onClick={() => removeProducto(producto.id)}>
+                                        <div className="remove__item" onClick={() => confirmarRemove(producto.id)}>
                                             <box-icon name='trash' type='solid'></box-icon>
                                         </div>
                                     </div>
                                 ))
                             }
-                            <button className="btn btn-outline-dark delete-we" onClick={() => remove()}>Limpiar Carrito     </button>
+                            <button className="btn btn-outline-dark delete-we" onClick={() => remove()}>Limpiar Carrito  </button>
 
                             <div className="carrito__footer">
                                 <h3>Total: ${total}</h3>

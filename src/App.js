@@ -9,8 +9,8 @@ import Cart from './components/Item/Cart'
 import Busqueda from './components/Item/Busqueda';
 import 'boxicons';
 import Footer from './components/footer/Footer';
-import Contact from './contact/Contact'
-
+import Hombre from './components/Item/Hombre';
+import Mujer from './components/Item/Mujer';
 function App() {
 
 
@@ -29,7 +29,8 @@ function App() {
             <Route path="/producto/:id" element={<ItemDetail />} />
             <Route path="/carrito" element={<Cart />} />
             <Route path="/busqueda" element={<Busqueda />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/hombre" element={<Hombre />} />
+            <Route path="/mujer" element={<Mujer />} />
           </Routes>
           
           <Footer />

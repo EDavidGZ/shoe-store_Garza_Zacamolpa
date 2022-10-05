@@ -20,7 +20,8 @@ const Menu = () => {
                     <ul className='list-group'>
                         <Link to='/' className='list-group-item' onClick={tooglefalse}>Inicio</Link>
                         <Link to='/producto' className='list-group-item'onClick={tooglefalse}>Productos</Link>
-                        <Link to='/contact' className='list-group-item'onClick={tooglefalse}>Contacto</Link>
+                        <Link to='/hombre' className='list-group-item'onClick={tooglefalse}>Hombre</Link>
+                        <Link to='/mujer' className='list-group-item'onClick={tooglefalse}>Mujer</Link>
                     </ul>
                 </div>
             </div>
