@@ -9,9 +9,8 @@ const Cart = () => {
     const [total] = value.total;
     const remove = value.remove;
     const confirmarRemove = value.confirmarRemove;
-    const actualizarTodo = value.actualizarTodo;
 
-  
+
 
 
     return (
@@ -58,7 +57,7 @@ const Cart = () => {
 
                             <div className="carrito__footer">
                                 <h3>Total: ${total}</h3>
-                                <Link to="/producto" className="btn" onClick={() => actualizarTodo()}>Terminar compra</Link>
+                                <Link to="/compra" className="btn">Terminar compra</Link>
                             </div>
 
                         </>

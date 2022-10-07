@@ -175,6 +175,7 @@
     .cont {
         grid-template-columns: repeat(2, 1fr);
         margin-top: 1rem;
+        margin-right: 1rem;
     }
     .cd2{
         height: 40vh;
@@ -183,8 +184,13 @@
     }
     .bdy{
         border-left: solid 0px rgba(0, 0, 0, 0.252);
-        margin-left: 0rem;
+        margin-left: 4rem;
         padding-left: 1rem;
+    }
+    .foto{
+        margin-left: 4rem;
+        margin-top: 3rem;
+        width: 30%;
     }
     .cd1{
         height: 80vh;

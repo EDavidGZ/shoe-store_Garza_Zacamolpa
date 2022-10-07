@@ -16,9 +16,7 @@ const ItemCount = () => {
 
   return (
     <>
-      <div className='cont'  data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="1000">
+      <div className='cont' >
         {
           productos.map((producto) => (
             <ItemList

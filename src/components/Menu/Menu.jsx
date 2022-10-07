@@ -15,13 +15,13 @@ const Menu = () => {
         <div className={show1}>
             <div className={show2}>
                 <GrFormClose className="carrito__close" onClick={tooglefalse} />
-               <br />
+                <br />
                 <div className="carrito__center">
                     <ul className='list-group'>
                         <Link to='/' className='list-group-item' onClick={tooglefalse}>Inicio</Link>
-                        <Link to='/producto' className='list-group-item'onClick={tooglefalse}>Productos</Link>
-                        <Link to='/hombre' className='list-group-item'onClick={tooglefalse}>Hombre</Link>
-                        <Link to='/mujer' className='list-group-item'onClick={tooglefalse}>Mujer</Link>
+                        <Link to='/producto' className='list-group-item' onClick={tooglefalse}>Productos</Link>
+                        <Link to='/hombre' className='list-group-item' onClick={tooglefalse}>Hombre</Link>
+                        <Link to='/mujer' className='list-group-item' onClick={tooglefalse}>Mujer</Link>
                     </ul>
                 </div>
             </div>

@@ -5,15 +5,14 @@ import products from './img/productos.jpg'
 import women from './img/mujer.jpeg'
 import './inicio.css'
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
+import 'aos/dist/aos.css'; 
 AOS.init();
 
 const Inicio = () => {
   return (
     <div>
       <div className='title-firts' data-aos="fade-up">
-      <p >Los mejores productos </p><p> al mejor precio</p>
+        <p >Los mejores productos </p><p> al mejor precio</p>
 
       </div>
       <div className=" g-0 inicio" data-aos="fade-up">

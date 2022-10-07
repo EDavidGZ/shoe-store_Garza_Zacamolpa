@@ -6,22 +6,31 @@
     margin: 0 auto;
     padding-top: 4rem;
 }
-.imgi1{
+
+.imgi1 {
     width: 100%;
+    padding: 1rem;
 }
-.imgi2{
+
+.imgi2 {
+    padding: 1rem;
     width: 80%;
     height: 100vh;
 }
-.im1{
+
+.im1 {
     width: 100%;
     height: 100vh;
+    padding: 1rem;
 }
-.im2{
+
+.im2 {
+    padding: 1rem;
     width: 100%;
     height: 50vh;
 }
-.title-firts{
+
+.title-firts {
     margin-top: 4rem;
     text-align: center;
     font-size: 2.3rem;
@@ -29,25 +38,55 @@
     font-family: system-ui, -apple-system;
     background: var(--color-primary);
 }
+
 @media screen and (max-width: 1200px) {
     .inicio {
         height: 60vh;
         overflow: hidden;
     }
-    .imgi1{
+
+    .imgi1 {
         width: 100%;
     }
-    .imgi2{
+
+    .imgi2 {
         width: 80%;
         height: 60vh;
     }
-    .im1{
+
+    .im1 {
         width: 100%;
         height: 60vh;
     }
-    .im2{
+
+    .im2 {
         width: 100%;
         height: 30vh;
     }
-    
+}
+
+@media screen and (max-width: 600px) {
+    .inicio {
+        height: 40vh;
+        overflow: hidden;
+    }
+    .imgi1 {
+        width: 100%;
+    }
+
+    .imgi2 {
+        width: 80%;
+        height: 40vh;
+    }
+
+    .im1 {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .im2 {
+        width: 100%;
+        height: 20vh;
+    }
+
 }

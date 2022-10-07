@@ -11,7 +11,6 @@ export const DataProvider = (props) => {
     const [carrito, setCarrito] = useState([])
     const [total, setTotal] = useState(0)
     const [cartValor, setCartValor] = useState(0)
-    const [car, setCar] = useState(false)
     const productoModificar = productos
     const [usuarios, setUsuarios] = useState([])
     const [hombre, setHombre] = useState([])
@@ -125,13 +124,11 @@ export const DataProvider = (props) => {
         }
     }
     /*============================ Function to total the product  =====================================================*/
-    // console.log(carrito)
     function actualizarTodo() {
         carrito.map(carUpdate => {
             productos.map(cxa => {
-                if (cxa.id == carUpdate.id) {
+                if (cxa.id === carUpdate.id) {
                     let resta = cxa.cantidad - carUpdate.cantidad
-                    console.log(resta)
                     Swal.fire({
                         title: 'La compra se realizo con exito',
                         width: 600,
@@ -166,12 +163,10 @@ export const DataProvider = (props) => {
             const cartv = carrito.reduce((prev, item) => {
                 return prev + item.cantidad ;
             }, 0)
-            console.log(cartv)
             setCartValor(cartv)
         }
         valorTotal()
         getTotal()
-        // GuardarEnStorage("datosDeStorage", carrito);
 
     }, [carrito, cartValor])
     /*============================ Function to remove products  =====================================================*/
@@ -218,37 +213,12 @@ export const DataProvider = (props) => {
    }
     const removeProducto = (id) => {
             let productosEliminar = carrito.filter(item => item.id !== id)
-            console.log(productosEliminar)
             setCarrito(productosEliminar);
         
 
     }
 
     /*=============================================================================*/
-    // const GuardarEnStorage = (clave, elemento) => {
-
-      
-    //     //conseguir elementos
-    
-    //     let elementos = JSON.parse(localStorage.getItem(clave));
-    //     //comprobar si son array
-    //     if(Array.isArray(elementos)) {
-    //         //añadir a array
-    //         elementos.push(elemento);
-    //     }else {
-    //       //crear array
-    //       elementos = [elemento];
-    //     }
-        
-        
-    //     //guardar en el local
-    //     localStorage.setItem(clave, JSON.stringify(elementos))
-    //     console.log(elementos);
-        
-    //     //devolver objeto
-    //     return elemento;
-    
-    //   }
     useEffect(() => {
         const dataCarrito = JSON.parse(localStorage.getItem('dataCarrito'));
         if(dataCarrito){
@@ -271,7 +241,6 @@ export const DataProvider = (props) => {
         confirmarRemove: confirmarRemove,
         remove: remove,
         cartValor: [cartValor],
-        car: [car],
         hombre: [hombre],
         mujer: [mujer],
         actualizarTodo: actualizarTodo,

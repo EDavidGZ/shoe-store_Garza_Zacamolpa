@@ -8,7 +8,7 @@ import { CartContext } from '../../context/CartContext'
 import CarWidget from './CarWidget'
 
 
-const NavBar = (props) => {
+const NavBar = () => {
     const value = useContext(CartContext)
     const [menu, setMenu] = value.menu;
     const filtrar = value.filtrar;
@@ -44,9 +44,9 @@ const NavBar = (props) => {
                         <li className="nav-item">
                             <Link to="/hombre" className="nav-link">Hombre</Link>
                         </li>
-                         <li className="nav-item">
+                        <li className="nav-item">
                             <Link to="/mujer" className="nav-link">Mujer</Link>
-                        </li> 
+                        </li>
 
 
                     </ul>
@@ -70,10 +70,10 @@ const NavBar = (props) => {
 
                     </form>
                     <CarWidget />
-                <GiHamburgerMenu onClick={toogleMenu} className='burguer'/>
+                    <GiHamburgerMenu onClick={toogleMenu} className='burguer' />
                 </div>
 
-             
+
             </nav>
 
 

@@ -11,6 +11,7 @@ import 'boxicons';
 import Footer from './components/footer/Footer';
 import Hombre from './components/Item/Hombre';
 import Mujer from './components/Item/Mujer';
+import Compra from './components/Item/Compra';
 function App() {
 
 
@@ -31,6 +32,7 @@ function App() {
             <Route path="/busqueda" element={<Busqueda />} />
             <Route path="/hombre" element={<Hombre />} />
             <Route path="/mujer" element={<Mujer />} />
+            <Route path="/compra" element={<Compra />} />
           </Routes>
           
           <Footer />
