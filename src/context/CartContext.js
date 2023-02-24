@@ -1,6 +1,7 @@
 import React, { useState, useEffect, createContext } from 'react'
 import { getProducts, updateStock } from '../utils/firebase';
 import Swal from 'sweetalert2'
+import bd from './Json/productos.json'
 
 export const CartContext = createContext();
 
@@ -19,13 +20,19 @@ export const DataProvider = (props) => {
 
 
 
-    async function conslutarDB() {
-        const producto = await getProducts()
-        const theItems = producto.docs.map(producto => producto.data())
-        const theKeys = producto.docs.map(producto => producto._key.path.segments[6])
-        theItems.map((item, index) => {
-            item.id = theKeys[index]
-        })
+     function conslutarDB() {
+        const producto = bd;
+        const theItems = producto.map(producto => producto)
+        const theKeys = producto.map(producto => producto.id)
+        // console.log(theKeys)
+        // theItems.map((item, index) => {
+        //     item.id = theKeys[index]
+        // // const producto = await getProducts()
+        // // const theItems = producto.docs.map(producto => producto.data())
+        // // const theKeys = producto.docs.map(producto => producto._key.path.segments[6])
+        // // theItems.map((item, index) => {
+        // //     item.id = theKeys[index]
+        // })
         setProductos(theItems)
         setTablaUsuarios(theItems)
     }

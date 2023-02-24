@@ -9,10 +9,9 @@
       "genero": "hombre"
     },
     {
-      "id": "2",
+      "id": 2,
       "title": "Nike Dunk Low Off-White Pine Green",
       "price": 310,
-      "iid": "2",
       "image": "https://firebasestorage.googleapis.com/v0/b/shoesstore-97a8f.appspot.com/o/img02.jpg?alt=media&token=554c7ea6-2996-48b8-8fc5-44d4f039c1b5",
       "category": "nike",
       "cantidad": 0,
